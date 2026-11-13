@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cr007axlp8u2t"]
+
+[ext_resource type="Texture2D" uid="uid://cxiqap52kb6e1" path="res://backgrounds/images.jpg" id="1_e2o6t"]
+[ext_resource type="Texture2D" uid="uid://bl34mhh68pfbk" path="res://backgrounds/back grounds.svg" id="2_feb5d"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fc0e3"]
+texture = ExtResource("1_e2o6t")
+0:0/size_in_atlas = Vector2i(18, 10)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7jktm"]
+texture = ExtResource("2_feb5d")
+0:0/size_in_atlas = Vector2i(17, 14)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_y3c0x"]
+sources/0 = SubResource("TileSetAtlasSource_fc0e3")
+sources/1 = SubResource("TileSetAtlasSource_7jktm")
+
+[node name="game" type="Node2D" unique_id=1957908377]
+
+[node name="TileMap" type="TileMap" parent="." unique_id=1517165757]
+tile_set = SubResource("TileSet_y3c0x")
+format = 2
+layer_0/name = "BackGround"
+layer_0/tile_data = PackedInt32Array(-65533, 0, 0, -196588, 1, 0, -131086, 1, 0)
+layer_1/name = "mid1"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=948565324]
+zoom = Vector2(5, 5)
